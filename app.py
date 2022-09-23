@@ -3,7 +3,7 @@ import random
 
 
 #initial variables
-user_hand = ""
+user_hand = "a"
 computer_answer_list = ['Rock', 'Paper', 'Scissors']
 score = 0
 
@@ -56,7 +56,7 @@ while user_hand != 'd':
             else:
                 print('The computer picked Scissors, it\'s a draw!\n\n Your score is  ' + str(score))
     else:
-        print('You choose an impossible hand, please restart the game...')
+        print('You choose an impossible hand, try again...')
 else:
     print('You have ended the game! Your final score is '+ str(score))
     
