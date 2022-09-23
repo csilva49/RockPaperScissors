@@ -22,15 +22,18 @@ while user_hand != 'd':
                 score += 1
                 print('The computer picked Rock, you win!\n\n Your score is  ' + str(score))
             else:
-                #if user loses, substract 1 point to board
-                score -= 1
+                #if user loses, substract 1 point to board, if score is 0 dont do anything
+                if score > 0:
+                    score -= 1
+
                 print('The computer picked Rock, you lost!\n\n Your score is  ' + str(score))
 
         #if computer picks paper
         if computer_hand == 'Paper':
             if user_hand == 'a':
-                #if user loses, substract 1 point to board
-                score -= 1
+                #if user loses, substract 1 point to board, if score is 0 dont do anything
+                if score > 0:
+                    score -= 1
                 print('The computer picked Paper, you lost!\n\n Your score is  ' + str(score))
             elif user_hand == 'b':
                 print('The computer picked Paper, it\'s a draw!\n\n Your score is  ' + str(score))
@@ -46,8 +49,9 @@ while user_hand != 'd':
                 score += 1
                 print('The computer picked Scissors, you win!\n\n Your score is  ' + str(score))
             elif user_hand == 'b':
-                #if user loses, substract 1 point to board
-                score -= 1
+                #if user loses, substract 1 point to board, if score is 0 dont do anything
+                if score > 0:
+                    score -= 1
                 print('The computer picked Scissors, you lost!\n\n Your score is  ' + str(score))
             else:
                 print('The computer picked Scissors, it\'s a draw!\n\n Your score is  ' + str(score))
